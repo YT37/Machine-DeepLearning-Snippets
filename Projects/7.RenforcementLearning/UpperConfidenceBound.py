@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import math
 
-dataset = pd.read_csv("AdsCTROptimisation.csv")
+dataset = pd.read_csv(r"../1.Datasets/AdsCTROptimisation.csv")
 
 d = 10
 N = 10000

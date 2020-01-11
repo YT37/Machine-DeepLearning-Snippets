@@ -3,13 +3,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.svm import SVR
 
-dataset = pd.read_csv("PositionSalaries.csv")
+dataset = pd.read_csv(r"../1.Datasets/PositionSalaries.csv")
 
 X = dataset.iloc[:, 1:2].values
 y = dataset.iloc[:, 2].values
-
-"""from sklearn.model_selection import train_test_split
-Xtrain, Xtest, yTrain, yTest = train_test_split(X, y, test_size=0.2, random_state=0)"""
 
 from sklearn.preprocessing import StandardScaler
 

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from apyori import apriori
 
-dataset = pd.read_csv("MarketBasketOptimisation.csv", header=None)
+dataset = pd.read_csv(r"../1.Datasets/MarketBasketOptimisation.csv", header=None)
 
 transactions = []
 

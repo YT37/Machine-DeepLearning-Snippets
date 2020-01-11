@@ -6,7 +6,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-dataset = pd.read_csv("SocialNetworkAds.csv")
+dataset = pd.read_csv(r"../1.Datasets/SocialNetworkAds.csv")
 
 X = dataset.iloc[:, [2, 3]].values
 y = dataset.iloc[:, 4].values

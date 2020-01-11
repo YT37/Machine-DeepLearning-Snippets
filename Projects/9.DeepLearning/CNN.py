@@ -1,5 +1,5 @@
+from tensorflow.keras.layers import Convolution2D, Dense, Flatten, MaxPooling2D
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Convolution2D,MaxPooling2D,Flatten,Dense
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 classifier = Sequential()
@@ -22,13 +22,13 @@ trainData = ImageDataGenerator(
 testData = ImageDataGenerator(rescale=1./255)
 
 trainSet = trainData.flow_from_directory(
-        directory='dataset/train',
+        directory=r"../1.Datasets/CNN/train",
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
 
 testSet = testData.flow_from_directory(
-        directory='dataset/test',
+        directory=r"../1.Datasets/CNN/test",
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
@@ -39,5 +39,3 @@ classifier.fit_generator(
         epochs=25,
         validation_data=testSet,
         validation_steps=2000)
-
-classifier.save("D:\Codes\Machine Learning\Section 40 - Convolutional Neural Networks (CNN)")

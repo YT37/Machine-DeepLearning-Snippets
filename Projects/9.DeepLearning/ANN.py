@@ -1,13 +1,13 @@
 import numpy as np
 import pandas as pd
-from tensorflown.keras.layers import Dense
-from tensorflow.keras.models import Sequential
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import Sequential
 
-dataset = pd.read_csv("ChurnModelling.csv")
+dataset = pd.read_csv(r"../1.Datasets/ChurnModelling.csv")
 
 X = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values

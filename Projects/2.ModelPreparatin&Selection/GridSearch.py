@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split, cross_val_score, GridSearc
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
-dataset = pd.read_csv("SocialNetworkAds.csv")
+dataset = pd.read_csv(r"../1.Datasets/SocialNetworkAds.csv")
 
 X = dataset.iloc[:, [2, 3]].values
 y = dataset.iloc[:, 4].values

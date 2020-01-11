@@ -3,20 +3,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 
-dataset = pd.read_csv("PositionSalaries.csv")
+dataset = pd.read_csv(r"..\1.Datasets\PositionSalaries.csv")
 
 X = dataset.iloc[:, 1:2].values
 y = dataset.iloc[:, 2].values
-
-"""from sklearn.model_selection import train_test_split
-Xtrain, Xtest, yTrain, yTest = train_test_split(X, y, test_size=0.2, random_state=0)"""
-
-"""from sklearn.preprocessing import StandardScaler
-scX = StandardScaler()
-Xtrain = scX.fit_transform(Xtrain)
-Xtest = scX.transform(Xtest)
-SCy = StandardScaler()
-yTrain = SCy.fit_transform(yTrain.reshape(-1,1))"""
 
 regressor = DecisionTreeRegressor(random_state=0)
 regressor.fit(X, y)

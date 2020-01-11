@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 
-dataset = pd.read_csv('RestaurantReviews.tsv', delimiter='\t', quoting=3)
+dataset = pd.read_csv(r"../1.Datasets/RestaurantReviews.tsv", delimiter='\t', quoting=3)
 
 filtered = [word for word in stopwords.words('english') if word != "not"]
 

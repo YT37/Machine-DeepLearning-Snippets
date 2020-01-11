@@ -4,7 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
-dataset = pd.read_csv("Data.csv")
+dataset = pd.read_csv(r"../1.Datasets/Data.csv")
 
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 3].values

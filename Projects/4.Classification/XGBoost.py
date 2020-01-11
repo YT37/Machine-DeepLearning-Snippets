@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import OneHotEncoder
 from xgboost import XGBClassifier
 
-dataset = pd.read_csv("ChurnModelling.csv")
+dataset = pd.read_csv(r"../1.Datasets/ChurnModelling.csv")
 
 X = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values

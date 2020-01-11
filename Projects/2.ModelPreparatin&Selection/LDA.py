@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 
-dataset = pd.read_csv("Wine.csv")
+dataset = pd.read_csv(r"../1.Datasets/Wine.csv")
 
 X = dataset.iloc[:, 0:13].values
 y = dataset.iloc[:, 13].values

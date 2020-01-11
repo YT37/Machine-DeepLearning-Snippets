@@ -6,7 +6,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 
-dataset = pd.read_csv("50Startups.csv")
+dataset = pd.read_csv(r"../1.Datasets/50Startups.csv")
 
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 4].values
