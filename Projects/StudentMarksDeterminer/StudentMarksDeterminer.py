@@ -7,7 +7,13 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import statsmodels.api as sm
 
-dataset = pd.read_csv(r"../1.Datasets/StudentMath.csv", delimiter=";")
+por = "StudentPor.csv"
+math = "StudentMath.csv"
+
+porSize = 649
+mathSize = 395
+
+dataset = pd.read_csv(math, delimiter=";")
 
 dataset = dataset.drop(dataset.loc[:, "address":'Walc'].columns, axis=1)
 
@@ -30,7 +36,7 @@ regressor.fit(Xtrain, yTrain)
 
 yPred = np.around(regressor.predict(Xtest), decimals=0)
 
-X = np.append(arr=np.ones((395, 1)).astype(int), values=X, axis=1)
+X = np.append(arr=np.ones((mathSize, 1)).astype(int), values=X, axis=1)
 
 rmse = np.sqrt(((yPred - yTest) ** 2).mean())
 
