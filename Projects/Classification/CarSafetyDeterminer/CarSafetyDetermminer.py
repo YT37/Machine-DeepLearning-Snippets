@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-dataset = pd.read_csv("CarSafety.csv")
+dataset = pd.read_csv(r"D:\Codes\MachineLearning\Projects\Classification\CarSafetyDeterminer\CarSafety.csv")
 
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
