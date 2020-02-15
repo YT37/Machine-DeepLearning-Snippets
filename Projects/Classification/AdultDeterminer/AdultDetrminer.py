@@ -4,21 +4,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 
-dataset = pd.read_csv(r"D:\Codes\MachineLearning\Projects\Classification\AdultDeterminer\AdultData.csv")
+dataset = pd.read_csv(
+    r"D:\Codes\MachineLearning\Projects\Classification\AdultDeterminer\AdultData.csv"
+)
 
-X = dataset.iloc[:, [0, 2, 4, 10, 11, 12]].values
+X = dataset.iloc[:, [0, 2, 4,  10, 11, 12]].values
 y = dataset.iloc[:, -1].values
 
 Xtrain, Xtest, yTrain, yTest = train_test_split(X,
                                                 y,
-                                                test_size=0.25,
+                                                test_size=0.10,
                                                 random_state=0)
 
 scX = StandardScaler()
 Xtrain = scX.fit_transform(Xtrain)
 Xtest = scX.transform(Xtest)
 
-classifier = KNeighborsClassifier(n_neighbors=5, metric="minkowski", p=2)
+classifier = KNeighborsClassifier(n_neighbors=10, metric="minkowski", p=2)
 classifier.fit(Xtrain, yTrain)
 
 yPred = classifier.predict(Xtest)
