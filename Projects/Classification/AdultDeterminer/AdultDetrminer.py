@@ -8,12 +8,12 @@ dataset = pd.read_csv(
     r"D:\Codes\MachineLearning\Projects\Classification\AdultDeterminer\AdultData.csv"
 )
 
-X = dataset.iloc[:, [0, 2, 4,  10, 11, 12]].values
-y = dataset.iloc[:, -1].values
+X = dataset.iloc[:30000, [0, 2, 4, 10, 11, 12]].values
+y = dataset.iloc[:30000, -1].values
 
 Xtrain, Xtest, yTrain, yTest = train_test_split(X,
                                                 y,
-                                                test_size=0.10,
+                                                test_size=0.15,
                                                 random_state=0)
 
 scX = StandardScaler()
