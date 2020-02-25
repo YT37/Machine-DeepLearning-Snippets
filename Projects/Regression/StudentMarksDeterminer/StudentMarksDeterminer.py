@@ -4,11 +4,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
-import statsmodels.api as sm
+from sklearn.metrics import confusion_matrix, accuracy_score
 
-por = "StudentPor.csv"
-math = "StudentMath.csv"
+por = r"D:\Codes\MachineLearning\Projects\Regression\StudentMarksDeterminer\StudentMath.csv"
+math = r"D:\Codes\MachineLearning\Projects\Regression\StudentMarksDeterminer\StudentPor.csv"
 
 porSize = 649
 mathSize = 395
@@ -34,10 +33,19 @@ Xtrain, Xtest, yTrain, yTest = train_test_split(X,
 regressor = LinearRegression()
 regressor.fit(Xtrain, yTrain)
 
-yPred = np.around(regressor.predict(Xtest), decimals=0)
+yPred = regressor.predict(Xtest)
 
-X = np.append(arr=np.ones((mathSize, 1)).astype(int), values=X, axis=1)
+yPredcm = np.zeros_like(yPred)
+yPredcm[yPred > 0.6] = 1
+yPredcm[yPred < 0.6] = 0
 
-rmse = np.sqrt(((yPred - yTest) ** 2).mean())
+yTestcm = np.zeros_like(yTest)
+yTestcm[yTest > 0.6] = 1
+yTestcm[yTest < 0.6] = 0
 
-r2 = r2_score(yTest, yPred)
+cm = confusion_matrix(yTestcm, yPredcm)
+
+accuracy = accuracy_score(yTestcm, yPredcm)
+precision = int((cm[1][1] / (cm[1][1] + cm[0][1])) * 10**3) / 10**3
+recall = int((cm[1][1] / (cm[1][1] + cm[1][0])) * 10**3) / 10**3
+f1Score = int((2 * precision * recall / (precision + recall)) * 10**3) / 10**3
