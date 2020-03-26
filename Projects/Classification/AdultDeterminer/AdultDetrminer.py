@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 
 dataset = pd.read_csv(
-    r"D:\Codes\MachineLearning\Projects\Classification\AdultDeterminer\AdultData.csv"
+    r"D:\Codes\MachineLearning\Projects\Classification\AdultDeterminer\Adult.csv"
 )
 
 X = dataset.iloc[:30000, [0, 2, 4, 10, 11, 12]].values
