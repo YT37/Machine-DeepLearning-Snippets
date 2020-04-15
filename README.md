@@ -1,6 +1,9 @@
-# MachineLearning
+# MachineLearning-Snippets
 
-1. These are the Snippets & Projects in MachineLearning.
-2. You are free to use them.
-3. But they are not commented.
-4. If you want any info on specific projects contact me.
+- These are small projects or code snippets from diffrent tutorials of MachineLearning.
+
+# Requirements
+ - They are in their respective folders
+ 
+ # Instructions To Use
+   - They are in their respective folders
