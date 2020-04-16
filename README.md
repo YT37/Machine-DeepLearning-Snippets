@@ -1,8 +1,21 @@
 # MachineLearning-Snippets
-- These are small projects or code snippets from diffrent tutorials of MachineLearning.
+
+- These are small code snippets of diffrent Felds and Algorithms of Machine Learning from diffrent tutorials of MachineLearning.
 
 # Requirements
- - They are in their respective folders
- 
+
+- SciKitLearn
+- NLTK
+- Pandas
+- SciPy
+- XGBoost
+- Apyori
+
 # Instructions To Use
-  - They are in their respective folders
+
+- Make sure all files should be in the same folder before running.
+
+- **Windows, Mac and Linux**
+  ```
+  pip install -r requirements.txt
+  ```
