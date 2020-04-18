@@ -45,7 +45,7 @@ bestParams = gs.best_params_"""
 
 # KFold CV
 """from sklearn.model_selection import cross_val_score
-accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10)
+accuracies = cross_val_score(estimator = classifier, X = Xtrain, y = yTrain, cv = 10)
 accuracies.mean()
 accuracies.std()"""
 
