@@ -4,3 +4,7 @@ xgboost
 apyori
 scipy
 nltk
+tensorflow
+pytorch
+numpy
+minisom

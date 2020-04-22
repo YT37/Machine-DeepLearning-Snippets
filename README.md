@@ -1,15 +1,19 @@
-# MachineLearning-Snippets
+# Machine-DeepLearning-Snippets
 
-- These are small code snippets of diffrent Felds and Algorithms of Machine Learning from diffrent tutorials of Machine Learning.
+- These are small code snippets of diffrent Felds and Algorithms of Machine Learning from diffrent tutorials of Machine Learning & DeepLearning.
 
 # Requirements
 
 - SciKitLearn
+- TensorFlow
+- PyTorch
+- MiniSom
 - NLTK
 - Pandas
 - SciPy
 - XGBoost
 - Apyori
+- NumPy
 
 # Instructions To Use
 
