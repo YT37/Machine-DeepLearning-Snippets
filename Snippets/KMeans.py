@@ -16,16 +16,3 @@ plt.show()
 kmeans = KMeans(n_clusters=5, init="k-means++",
                 max_iter=300, n_init=10, random_state=0)
 yKmeans = kmeans.fit_predict(X)"""
-
-# Hierarchial Clustering
-"""import scipy.cluster.hierarchy as hc
-dendogram = hc.dendrogram(hc.linkage(X,method="ward"))
-plt.title("Dendogram")
-plt.xlabel("Customers")
-plt.ylabel("Eucleidian Distances")
-plt.show
-
-from sklearn.cluster import AgglomerativeClustering
-hc = AgglomerativeClustering(
-    n_clusters=5, affinity="euclidean", linkage="ward")
-yHc = hc.fit_predict(X)"""
