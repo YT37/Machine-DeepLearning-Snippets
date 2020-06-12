@@ -15,6 +15,12 @@ schema.default_environment.append("SERVING")
 tfdv.get_feature(schema, "---").not_in_environment.append("SERVING")
 serving_env_anomalies = tfdv.validate_statistics(testStats, schema, environment="SERVING")"""
 
+# TensorBoard
+"""from tensorflow.keras.callbacks import TensorBoard
+tensorboard = TensorBoard(log_dir="logs/{}".format(NAME))
+
+tensorboard --logdir=logs/."""
+
 # TensorFlowServing
 """from tensorflow.saved_model import simple_save
 from tensorflow.keras.backend import get_session
@@ -40,5 +46,3 @@ distribute = MirroredStrategy()
 
 with distribute.scope():
     # Define Model Here"""
-
-
